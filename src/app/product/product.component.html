@@ -1,0 +1,51 @@
+<div class="form-style-3">
+    <form>
+    <fieldset><legend>Products</legend>
+    <label for="field1">
+      <span>Name  </span>
+      <input type="text" [(ngModel)]='name' class="input-field" name="field1" value="" />
+    </label>
+    <label for="field2">
+      <span>Quntity</span>
+      <input type="text"  [(ngModel)]='quantity'  class="input-field" name="field2" value="" />
+    </label>
+    <label for="field3">
+      <span>Price</span>
+      <input type="text" [(ngModel)]='price' class="input-field" name="field3" value="" /></label>
+    
+      <label class="customLable"><span> </span>
+        <button (click)="printValue()">Add New Product</button>
+      </label>
+  </fieldset>
+  <fieldset><legend>Result</legend>
+    <table class="greyGridTable">
+        <thead>
+        <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let prod of rows">
+        <td>{{prod.id}}</td>
+        <td>{{prod.name}}</td>
+        <td>{{prod.quantity}}</td>
+        <td>{{prod.price}}</td>
+        </tr>
+        </tbody>
+        </table>
+    
+  </fieldset>
+    </form>
+    </div>
+
+
+      <!--
+<table>
+  <tr>
+    <td *ngFor="let prod of ProductArr">{{prod}}</td>
+  </tr>
+</table>
+-->
